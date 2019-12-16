@@ -19,14 +19,18 @@ jobs:
         dir "c:\Program Files (x86)\Microsoft Visual Studio"
         dir "c:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise"
         dir "c:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC"
+        dir "c:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary"
         dir "c:\Program Files (x86)\Microsoft Visual Studio 14.0"
         dir "c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
         dir c:\hostedtoolcache
         dir c:\hostedtoolcache\windows
         dir c:\hostedtoolcache\windows\Python
         dir c:\hostedtoolcache\windows\Python\3.8.0
+        dir c:\hostedtoolcache\windows\Python\3.8.0\x64
+        dir c:\hostedtoolcache\windows\Python\3.8.0\x86
         dir c:\hostedtoolcache\windows\Ruby
         dir c:\hostedtoolcache\windows\Ruby\2.6.3
+        dir c:\hostedtoolcache\windows\Ruby\2.6.3\x64
         where git
         where hg
         git version
