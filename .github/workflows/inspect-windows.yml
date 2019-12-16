@@ -35,6 +35,7 @@ jobs:
         dir c:\hostedtoolcache\windows\Ruby\2.6.3\x64
         where git
         where hg
+        where curl
         git version
         hg version
         C:\Strawberry\perl\bin\perl.exe -v
