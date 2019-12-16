@@ -38,4 +38,4 @@ jobs:
         C:\Strawberry\perl\bin\perl.exe -v
         call "c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall"
         cl
-        vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+        "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
