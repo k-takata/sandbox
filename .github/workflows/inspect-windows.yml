@@ -13,11 +13,14 @@ jobs:
       shell: cmd
       run: |
         cd
-        path
+        set
         dir c:\
         dir "c:\Program Files"
         dir "c:\Program Files (x86)\Microsoft Visual Studio"
+        dir "c:\Program Files (x86)\Microsoft Visual Studio\2019"
         dir "c:\Program Files (x86)\Microsoft Visual Studio 14.0"
+        dir "c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
         dir c:\hostedtoolcache
+        dir c:\hostedtoolcache\windows
         where git
         where hg
