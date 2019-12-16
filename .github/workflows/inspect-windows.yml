@@ -17,10 +17,15 @@ jobs:
         dir c:\
         dir "c:\Program Files"
         dir "c:\Program Files (x86)\Microsoft Visual Studio"
-        dir "c:\Program Files (x86)\Microsoft Visual Studio\2019"
+        dir "c:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise"
         dir "c:\Program Files (x86)\Microsoft Visual Studio 14.0"
         dir "c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
         dir c:\hostedtoolcache
         dir c:\hostedtoolcache\windows
+        dir c:\hostedtoolcache\windows\Python
+        dir c:\hostedtoolcache\windows\Ruby
         where git
         where hg
+        git version
+        hg version
+        C:\Strawberry\perl\bin\perl.exe -v
