@@ -1,0 +1,21 @@
+name: Inspect Windows environment
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check something
+      shell: cmd
+      run: |
+        cd
+        path
+        dir c:\
+        dir "c:\Program Files"
+        dir "c:\Program Files (x86)"
+        where git
+        where hg
