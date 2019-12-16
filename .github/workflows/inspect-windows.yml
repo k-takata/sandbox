@@ -16,6 +16,8 @@ jobs:
         path
         dir c:\
         dir "c:\Program Files"
-        dir "c:\Program Files (x86)"
+        dir "c:\Program Files (x86)\Microsoft Visual Studio"
+        dir "c:\Program Files (x86)\Microsoft Visual Studio 14.0"
+        dir c:\hostedtoolcache
         where git
         where hg
