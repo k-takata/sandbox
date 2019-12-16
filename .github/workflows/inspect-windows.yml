@@ -41,3 +41,9 @@ jobs:
         call "c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall"
         cl
         "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+    - name: Run VC2019
+      shell: cmd
+      run: |
+        cl
+        call "c:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall" x86
+        cl
