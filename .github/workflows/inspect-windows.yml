@@ -56,3 +56,10 @@ jobs:
       shell: cmd
       run: |
         echo %ESC%[31mRed%ESC%[m
+    - name: Test push
+      shell: cmd
+      run: |
+        git config --local user.name "vim-kt CI"
+        git config --local user.email "k-takata@users.noreply.github.com"
+        git commit --allow-empty -m "Test commit"
+        git push
