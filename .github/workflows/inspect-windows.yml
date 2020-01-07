@@ -2,6 +2,10 @@ name: Inspect Windows environment
 
 on: [push]
 
+env:
+  RUBY_BRANCH: ruby_2_6
+  RUBY_SRC_URL: https://github.com/ruby/ruby/archive/${{ env.RUBY_BRANCH }}.zip
+
 jobs:
   build:
 
