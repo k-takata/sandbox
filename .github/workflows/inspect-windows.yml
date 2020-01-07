@@ -4,12 +4,15 @@ on: [push]
 
 env:
   RUBY_BRANCH: ruby_2_6
-  RUBY_SRC_URL: https://github.com/ruby/ruby/archive/${{ env.RUBY_BRANCH }}.zip
+  #RUBY_SRC_URL: https://github.com/ruby/ruby/archive/${{ env.RUBY_BRANCH }}.zip
 
 jobs:
   build:
 
     runs-on: windows-latest
+
+    env:
+      RUBY_SRC_URL: https://github.com/ruby/ruby/archive/${{ env.RUBY_BRANCH }}.zip
 
     steps:
     - uses: actions/checkout@v2
