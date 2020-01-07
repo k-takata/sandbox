@@ -1,0 +1,21 @@
+name: Matrix test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        arch: [x64, x86]
+
+    env:
+      ARCH: ${{ matrix.arch }}
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: test script
+      run: |
+        echo $ARCH
