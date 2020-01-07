@@ -63,3 +63,8 @@ jobs:
 #        git config --local user.email "k-takata@users.noreply.github.com"
 #        git commit --allow-empty -m "Test commit"
 #        git push
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      shell: bash
+      run: echo "$GITHUB_CONTEXT"
