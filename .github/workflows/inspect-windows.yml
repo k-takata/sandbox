@@ -59,6 +59,11 @@ jobs:
         cl
         call "c:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall" x86
         cl
+    - name: Read Python path from registry
+      shell: cmd
+      run: |
+        reg query HKLM\SOFTWARE\Python\PythonCore\3.8\InstallPath /reg:64 /ve
+        reg query HKLM\SOFTWARE\Python\PythonCore\3.8-32\InstallPath /reg:32 /ve
     - name: Test escape sequence
       env:
         ESC: "\x1b"
