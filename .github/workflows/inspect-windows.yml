@@ -35,12 +35,13 @@ jobs:
         dir c:\hostedtoolcache
         dir c:\hostedtoolcache\windows
         dir c:\hostedtoolcache\windows\Python
-        dir c:\hostedtoolcache\windows\Python\3.8.0
-        dir c:\hostedtoolcache\windows\Python\3.8.0\x64
-        dir c:\hostedtoolcache\windows\Python\3.8.0\x86
+        dir c:\hostedtoolcache\windows\Python\3.8.1
+        dir c:\hostedtoolcache\windows\Python\3.8.1\x64
+        dir c:\hostedtoolcache\windows\Python\3.8.1\x86
         dir c:\hostedtoolcache\windows\Ruby
-        dir c:\hostedtoolcache\windows\Ruby\2.6.3
-        dir c:\hostedtoolcache\windows\Ruby\2.6.3\x64
+        dir c:\hostedtoolcache\windows\Ruby\2.6.5
+        dir c:\hostedtoolcache\windows\Ruby\2.6.5\x64
+        dir c:\hostedtoolcache\windows\Ruby\2.7.0
         where git
         where hg
         where curl
