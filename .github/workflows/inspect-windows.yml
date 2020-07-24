@@ -22,6 +22,7 @@ jobs:
         cd
         set
         dir c:\
+        dir c:\msys64\mingw64\bin
         dir "c:\Program Files"
         dir "c:\Program Files (x86)"
         dir "c:\Program Files (x86)\Microsoft Visual Studio"
