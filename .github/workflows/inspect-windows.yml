@@ -36,20 +36,20 @@ jobs:
         dir c:\hostedtoolcache
         dir c:\hostedtoolcache\windows
         dir c:\hostedtoolcache\windows\Python
-        dir c:\hostedtoolcache\windows\Python\3.8.1
-        dir c:\hostedtoolcache\windows\Python\3.8.1\x64
-        dir c:\hostedtoolcache\windows\Python\3.8.1\x86
+        dir c:\hostedtoolcache\windows\Python\3.8.3
+        dir c:\hostedtoolcache\windows\Python\3.8.3\x64
+        dir c:\hostedtoolcache\windows\Python\3.8.3\x86
         dir c:\hostedtoolcache\windows\Ruby
-        dir c:\hostedtoolcache\windows\Ruby\2.6.5
-        dir c:\hostedtoolcache\windows\Ruby\2.6.5\x64
-        dir c:\hostedtoolcache\windows\Ruby\2.7.0
+        dir c:\hostedtoolcache\windows\Ruby\2.6.6
+        dir c:\hostedtoolcache\windows\Ruby\2.6.6\x64
+        dir c:\hostedtoolcache\windows\Ruby\2.7.1
         where git
         where hg
         where curl
         git version
         hg version
         C:\Strawberry\perl\bin\perl.exe -v
-        c:\hostedtoolcache\windows\Ruby\2.6.3\x64\bin\ruby -v
+        c:\hostedtoolcache\windows\Ruby\2.7.1\x64\bin\ruby -v
         call "c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall"
         cl
         "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
