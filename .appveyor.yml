@@ -1,0 +1,7 @@
+version: "1.0.{build}"
+
+image: Visual Studio 2022
+
+build_script:
+  - echo Test of secure values
+  - echo %SECURE%
