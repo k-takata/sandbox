@@ -1,0 +1,25 @@
+name: Bug
+on: push
+
+jobs:
+  bug:
+    runs-on: windows-latest
+    steps:
+      - run: Invoke-WebRequest https://github.com/vim/vim-win32-installer/releases/download/v9.1.0631/gvim_9.1.0631_x64.zip -OutFile gvim_9.1.0631_x64.zip
+      - run: Expand-Archive gvim_9.1.0631_x64.zip unzipped
+
+      # See: https://github.com/nelsonjchen/reverse-rdp-windows-github-actions
+      - name: Enable RDP
+        env:
+          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        run: |
+          Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+          Expand-Archive ngrok.zip
+          .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+          Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+          Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+          Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+          Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
+          Start-Process .\ngrok\ngrok.exe -ArgumentList "tcp 3389"
+
+      - run: unzipped/vim/vim91/vim.exe --version
